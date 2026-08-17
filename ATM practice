@@ -1,0 +1,60 @@
+S_PIN_number = 9874
+S_name = "suman kumari"
+S_number = "8700406783"
+S_key = "kumari"
+S_amount = 40000
+
+
+E_PIN = int(input("enter your 4-digit PIN Number: "))
+
+if(E_PIN == S_PIN_number):
+    print(f"Wlecome {S_name}")
+
+    task = int(input("enter 0 for balance check\nEnter 1 for cash withdraw\nEnter 2 for cash deposit\nEnter 3 for PIN chnage\nEnter 4 for name and number change\n "))
+    
+    if(task == 0):
+        print(f"Your stored amount: {S_amount}")
+
+    elif(task == 1):
+        E_amount = int(input("How much money do you want to withdraw?: "))
+        if(E_amount <= S_amount):
+            S_amount = S_amount - E_amount
+            print(f"The amount has been withdrawn Your remaining balance is {S_amount}")
+
+        elif((E_amount > S_amount)):
+            print("The balance is insufficient!")
+
+    elif(task == 2):
+        D_amount = int(input("Enter your deposit amount!"))
+
+        S_amount = S_amount + D_amount
+        print(f"Your amount has been depositted sucessfully -your stored amount is {S_amount}")
+
+    elif(task == 3):
+        E_key = (input("Enter your pass key for changing the PIN: "))
+        if(E_key == S_key):
+            N_PIN = input("Enter your new 4-digit PIN number")
+            S_PIN_number = N_PIN 
+            print(S_PIN_number)
+
+    elif(task == 4):
+        E_key = input("Enter your pass key for changing your name or number: ")
+        if(E_key == S_key):
+            change = int(input("Enter 1,2 or 3\n1 for Name chnage\n2 Number change\n3 for both"))
+
+            if(change == 1):
+                n_number = input("Enter your new number: ")
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
