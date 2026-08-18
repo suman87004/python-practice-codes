@@ -44,16 +44,27 @@ if(E_PIN == S_PIN_number):
 
             if(change == 1):
                 n_number = input("Enter your new number: ")
+                S_number = n_number
+                print(f"Thanks for using us we have updated your number - Your new number is {s_number}")
 
+            elif(change == 2):
 
+                n_number = input("Enter your new name: ")
+                s_number = n_number
+                print(f"Thanks for using us we updated your name - Your new name is {s_name}")
 
+            elif(change == 3):
 
+                n_name = input("enter your new name: ")
+                n_number = input("Enter your new number: ")
+                s_number = n_number
+                s_name  = n_name 
+                print(f"Thanks for using us we have updated your name and number - Your new number is {s_number} & Your new name is {s_name}")
 
-    
-
-    
-
-
+else:
+    print("Your PIN is incorrect")
+    counter = 0
+    Again_try = int(input("Do you want to try again\nEnter 1 for yes or 0 for not: "))
 
 
 
