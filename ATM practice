@@ -3,69 +3,101 @@ S_name = "suman kumari"
 S_number = "8700406783"
 S_key = "kumari"
 S_amount = 40000
+counter = 1
 
+while(counter <= 3):
 
-E_PIN = int(input("enter your 4-digit PIN Number: "))
+    E_PIN = int(input("enter your 4-digit PIN Number: "))
 
-if(E_PIN == S_PIN_number):
-    print(f"Wlecome {S_name}")
+    if(E_PIN == S_PIN_number):
+        print(f"Wlecome {S_name}")
 
-    task = int(input("enter 0 for balance check\nEnter 1 for cash withdraw\nEnter 2 for cash deposit\nEnter 3 for PIN chnage\nEnter 4 for name and number change\n "))
-    
-    if(task == 0):
-        print(f"Your stored amount: {S_amount}")
-
-    elif(task == 1):
-        E_amount = int(input("How much money do you want to withdraw?: "))
-        if(E_amount <= S_amount):
-            S_amount = S_amount - E_amount
-            print(f"The amount has been withdrawn Your remaining balance is {S_amount}")
-
-        elif((E_amount > S_amount)):
-            print("The balance is insufficient!")
-
-    elif(task == 2):
-        D_amount = int(input("Enter your deposit amount!"))
-
-        S_amount = S_amount + D_amount
-        print(f"Your amount has been depositted sucessfully -your stored amount is {S_amount}")
-
-    elif(task == 3):
-        E_key = (input("Enter your pass key for changing the PIN: "))
-        if(E_key == S_key):
-            N_PIN = input("Enter your new 4-digit PIN number")
-            S_PIN_number = N_PIN 
-            print(S_PIN_number)
-
-    elif(task == 4):
-        E_key = input("Enter your pass key for changing your name or number: ")
-        if(E_key == S_key):
-            change = int(input("Enter 1,2 or 3\n1 for Name chnage\n2 Number change\n3 for both"))
-
-            if(change == 1):
-                n_number = input("Enter your new number: ")
-                S_number = n_number
-                print(f"Thanks for using us we have updated your number - Your new number is {s_number}")
-
-            elif(change == 2):
-
-                n_number = input("Enter your new name: ")
-                s_number = n_number
-                print(f"Thanks for using us we updated your name - Your new name is {s_name}")
-
-            elif(change == 3):
-
-                n_name = input("enter your new name: ")
-                n_number = input("Enter your new number: ")
-                s_number = n_number
-                s_name  = n_name 
-                print(f"Thanks for using us we have updated your name and number - Your new number is {s_number} & Your new name is {s_name}")
-
-else:
-    print("Your PIN is incorrect")
-    counter = 0
-    Again_try = int(input("Do you want to try again\nEnter 1 for yes or 0 for not: "))
+        task = int(input("enter 0 for balance check\nEnter 1 for cash withdraw\nEnter 2 for cash deposit\nEnter 3 for PIN chnage\nEnter 4 for name and number change\n "))
+        
+        if(task == 0):
+            print(f"Your stored amount: {S_amount}")
+            balance_task = int(input("Do you want to continue press 1 for yes 0 for no"))
+            if(balance_task == 1):
+                continue
+            elif(balance_task == 0):
+                print("Thanks for using our services!")
+                break
+            else: 
+                print("Wrong input!")
+                counter += 1    
 
 
 
+        elif(task == 1):
+            E_amount = int(input("How much money do you want to withdraw?: "))
+            if(E_amount <= S_amount):
+                S_amount = S_amount - E_amount
+                print(f"The amount has been withdrawn Your remaining balance is {S_amount}")
 
+            elif((E_amount > S_amount)):
+                print("The balance is insufficient!")
+                print("Do you want to try again\n Enter press 1 for Yes \n enter press 0 for No: ")
+
+                if(Again_try == 1):
+                    counter += 1
+
+        elif(task == 2):
+            D_amount = int(input("Enter your deposit amount!"))
+
+            S_amount = S_amount + D_amount
+
+            print(f"Your amount has been depositted sucessfully -your stored amount is {S_amount}")
+            Again_deposite = int(input("Do you want to try again\n Enter press 1 for Yes \n enter press 0 for No\n "))
+
+            if(Again_deposite == 1):
+                counter += 1
+
+        elif(task == 3):
+            E_key = (input("Enter your pass key for changing the PIN: "))
+            if(E_key == S_key):
+                N_PIN = int(input("Enter your new 4-digit PIN number"))
+                S_PIN_number = N_PIN 
+                print(S_PIN_number)
+                Try_again = int(input("Do you want to try again for changing your PIN\n Enter press 1 for Yes \n enter press 0 for No\n "))
+
+                if(Try_again == 1):
+                    counter += 1
+
+        elif(task == 4):
+            E_key = input("Enter your pass key for changing your name or number: ")
+            if(E_key == S_key):
+                change = int(input("Enter 1,2 or 3\n1 for Name chnage\n2 Number change\n3 for both"))
+
+                if(change == 1):
+                    n_number = input("Enter your new number: ")
+                    S_number = n_number
+                    print(f"Thanks for using us we have updated your number - Your new number is {s_number}")
+
+                elif(change == 2):
+
+                    n_number = input("Enter your new name: ")
+                    s_number = n_number
+                    print(f"Thanks for using us we updated your name - Your new name is {s_name}")
+
+                elif(change == 3):
+
+                    n_name = input("enter your new name: ")
+                    n_number = input("Enter your new number: ")
+                    s_number = n_number
+                    s_name  = n_name 
+                    print(f"Thanks for using us we have updated your name and number - Your new number is {s_number} & Your new name is {s_name}")
+
+    else:
+        print("Your PIN is incorrect")
+        Again_try = int(input("Do you want to try again\nEnter 1 for yes or 0 for not: "))
+
+        if(Again_try == 1):
+            counter += 1
+
+        elif(Again_try == 0):
+            print("Thank you so much for using our services") 
+            break   
+
+        else:
+            print("Wrong input")
+            counter += 1    
