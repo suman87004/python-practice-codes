@@ -1,0 +1,68 @@
+fare = 0
+
+counter = 0
+
+while(counter < 3):
+
+    Arrival = input("Enter your arrivel station: ").upper()
+    Departure = input("Enter your departure station: ").upper()
+    number_of_persons = int(input("How many tickets do you want!"))
+
+
+
+    if((Arrival == "DHANSA" and Departure == "DWARKA MOR") or (Arrival == "DWARKA MOR" and Departure == "DHANSA")):
+        fare = 40
+        while(fare == "Arrival" and "Departure"):
+            Pay == fare 
+
+    elif((Arrival == "DHANSA" and Departure == "NOIDA") or (Arrival == "NOIDA" or Departure == "DHANSA")):
+        fare = 60
+
+
+    elif((Arrival == "DHANSA" and Departure == "RAJIV CHOWAK") or (Arrival == "RAJIV CHOWAK" and Departure == "DHANSA")):
+        fare = 30
+
+    elif((Arrival== "DHANSA" and Departure == "VASHALI") or (Arrival == "VASHALI" and Departure == "DHANSA")):
+        fare = 64
+
+    elif((Arrival == "DWARKA MOR" and Departure == "NOIDA" or Arrival == "NOIDA" and Departure == "DWARKA MOR")):
+        fare = 50
+
+    elif((Arrival == "DWARKA" and Departure == "RAJIV CHOWAK") or (Arrival == "RAJIV CHOWAK" and Departure == "DWARKA")):
+        fare = 30
+
+    elif((Arrival == "DWARKA" and Departure == "VASHALI") or (Arrival == "VASHALI" and Departure == "DWARKA")):
+        fare = 64
+
+    elif((Arrival == "NOIDA" and Departure == "RAJIV CHOWK") or(Arrival == "RAJIV CHOWK" and Departure == "NOIDA")):
+        fare = 40
+
+    elif((Arrival == "NOIDA" and Departure == "VASHALI") or (Arrival == "VASHALI" and Departure == "NOIDA")):
+        fare = 20
+
+    elif((Arrival == "RAJIV CHOWK" and Departure == "VASHALI") or (Arrival == "VASHALI" and Departure == "RAJIV CHOWK")):
+        fare = 34
+
+        
+
+    else: 
+        print("Incorrect Input either Destination or Arrival place!")
+
+
+
+
+total_fare = number_of_persons * fare
+print(total_fare)
+
+
+
+
+
+
+
+
+
+
+
+
+
