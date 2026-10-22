@@ -1,0 +1,15 @@
+def is_prime(n):
+
+    num = 1
+
+    while(n <= num):
+        if(num % 2 == 0):
+            print("prime number")
+
+        else:
+            print("not a prime number")
+            num += 1
+
+    return n 
+
+print(is_prime(50))
