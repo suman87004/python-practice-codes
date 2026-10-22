@@ -1,0 +1,22 @@
+l_1 = [5,45,2,16,78,35]
+
+
+def sorting(n):
+
+    i = 1
+
+    while(n < (len[l_1])):
+        j = 1
+
+        while(j < i):
+            j += 1
+
+            l_1[j] = l_1[j+1]
+            l_1[j+1] = l_1[j]
+
+            c = l_1[j+1]
+
+    i +=1
+    return n
+
+print(sorting(l_1))
