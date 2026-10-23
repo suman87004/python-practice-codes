@@ -1,0 +1,24 @@
+lis= [[12, 23, 32, 13, 43, 45], [12, 23, 32, 13, 43, 45], [12, 23, 32, 13, 43, 45],[12, 23, 32, 13, 43, 45]]
+
+def deletion(li, element, ind, index):
+
+    ref_lis =[0] * (len(lis[index]) -1)
+
+    i = 0
+    while(i < ind):
+        ref_lis[i] = li[index][i]
+        i += 1
+
+    ref_lis[i] = element
+    i += 1
+    while(i < len(ref_lis)):
+        ref_lis[i-1] = li[index-1][i-1]
+        i+=1
+    
+    li[index] = ref_lis
+
+    return li
+
+print(lis)
+print()
+print(deletion(index= 1, ind= 2, element =3,li= lis))
