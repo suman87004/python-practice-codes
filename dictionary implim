@@ -1,0 +1,14 @@
+person1= {
+    "name" : "suman",
+    "age" : 27,
+    "height" : 5.4
+    }
+
+
+print(person1)
+print()
+
+person1 ["name"] = "suman_kumari"
+print()
+
+print(person1)
